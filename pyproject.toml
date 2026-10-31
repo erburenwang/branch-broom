@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "branch-broom"
+version = "1.0.0"
+description = "A dry-run-first planner for cleaning up local Git branches."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+keywords = ["git", "branches", "cleanup", "cli", "offline"]
+classifiers = [
+  "Environment :: Console",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: 3.11",
+  "Programming Language :: Python :: 3 :: 3.12",
+  "Programming Language :: Python :: 3 :: 3.13",
+  "Topic :: Software Development :: Version Control :: Git",
+]
+dependencies = []
+
+[project.scripts]
+branch-broom = "branch_broom.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
